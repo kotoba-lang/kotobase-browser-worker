@@ -18,7 +18,7 @@
   "../chain/src"
   "../io-ipld/src"
   "../io-multiformats/src"
-  "../dag-cbor/src"
+  "../org-ietf-cbor/src" ; renamed from dag-cbor 2026-07-06
   ;; reuse the pure XRPC handler + backend-agnostic block-miss trampoline
   ;; verbatim -- this repo only adds the IndexedDB IO primitives, no engine
   ;; or dispatch logic is duplicated.
