@@ -16,8 +16,8 @@
   "../arrangement/src"
   "../prolly-tree/src"
   "../chain/src"
-  "../ipld/src"
-  "../multiformats/src"
+  "../io-ipld/src"
+  "../io-multiformats/src"
   "../dag-cbor/src"
   ;; reuse the pure XRPC handler + backend-agnostic block-miss trampoline
   ;; verbatim -- this repo only adds the IndexedDB IO primitives, no engine
