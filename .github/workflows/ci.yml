@@ -47,9 +47,19 @@ jobs:
       # Compile-only check (:test/:node-test target -- catches broken
       # references/syntax across the whole source-path closure). This is
       # NOT the actual test suite: the one real test file
-      # (idb_test.cljc) requires a live browser's IndexedDB and only
+      # (idb_test.cljs) requires a live browser's IndexedDB and only
       # compiles under :browser-test, per its own docstring. Running
       # (not just compiling) that suite needs a real browser tab and is
       # a documented, pre-existing gap (see shadow-cljs.edn's own
       # comment) -- not something this CI job attempts.
       - run: npm run test:compile
+
+  lint:
+    name: clj-kondo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeLaGuardo/setup-clojure@13.4
+        with:
+          cli: latest
+      - run: clojure -M:lint
