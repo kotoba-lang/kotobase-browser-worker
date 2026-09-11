@@ -5,7 +5,7 @@
 ;; (transact/datoms/q/pull/fold) runs entirely inside a browser tab
 ;; (ADR-2607051700, app-aozora).
 ;;
-;; build-test: npm run build-test  (shadow-cljs release browser-test →
+;; build-test: npm run build-test  (amu compile --target wasm32-browser browser-test →
 ;;             out/browser-test/index.html, open in an actual browser)
 {:source-paths
  ["src" "test"
