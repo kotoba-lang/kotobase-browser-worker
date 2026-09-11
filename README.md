@@ -40,7 +40,7 @@ for the read-plane design this extends to writes.
 
 ```bash
 npm install
-npm run build-test          # shadow-cljs release browser-test → out/browser-test/
+npm run build-test          # amu compile --target wasm32-browser browser-test → out/browser-test/
 cd out/browser-test && python3 -m http.server 8823
 # open http://localhost:8823/index.html in an actual browser — cljs.test
 # results print to the page and console. All tests transact/fold/read
